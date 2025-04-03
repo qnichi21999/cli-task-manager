@@ -94,14 +94,15 @@ def main_menu():
             print("Введите действие в правильном формате")
             continue
         choice = int(choice)
-        if choice == 1:
-            make_new_task()
-        elif choice == 2:
-            complete_task()
-        elif choice == 3:
-            change_task_parameters()
-        else:
-            sys.exit()
+        match choice:
+            case 1:
+                make_new_task()
+            case 2:
+                complete_task()
+            case 3:
+                change_task_parameters()
+            case _:
+                sys.exit()
 
 
 if __name__ == "__main__":
